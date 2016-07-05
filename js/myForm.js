@@ -5,8 +5,9 @@ angular.module('myForm',['ngRoute','myForm.controllers'])
     .run(["$rootScope",function ($rootScope) {
         $rootScope.items = []
     }])
-    .config(['$routeProvider', function($routeProvider){
-        $routeProvider.when('/edit',{
+    .config(['$routeProvider',"$locationProvider" ,function($routeProvider,$locationProvider){
+        $routeProvider
+        .when('/edit',{
             templateUrl:"tpl/edit.html",
             controller:"editPageController"
         }).when('/preview',{
@@ -15,6 +16,7 @@ angular.module('myForm',['ngRoute','myForm.controllers'])
         }).otherwise({
             redirectTo:'/edit'
         });
+        // $locationProvider.html5Mode(true);
     }]);
 
 

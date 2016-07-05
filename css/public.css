@@ -13,7 +13,7 @@ h1, h2, h3, h4, table,th, td, input, button, select,textarea,hr {
 }
 body{
 	color:#000000;
-	background:#f4f4f4;
+	/*background:#f4f4f4;*/
 	text-align:center;
 }
 ol, ul ,li{list-style: none;}
@@ -30,7 +30,7 @@ a:hover{color:#F00;}
 	margin: 0 auto;
 	margin-top: 50px;
 	padding: 10px;
-	border: 2px solid red;
+	border: 2px solid gray;
 	border-radius: 20px;
 }
 
@@ -49,6 +49,13 @@ a:hover{color:#F00;}
 
 .form-content{
 	min-height: 20px;
+	margin-bottom: 10px;
+}
+.item-div{
+	width: 100%;
+	border-bottom: 1px solid sienna;
+	height: 30px;
+	line-height: 30px;
 }
 #pop_up_box{
 	/*display: none;*/
