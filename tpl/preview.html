@@ -1,0 +1,11 @@
+<div id="main_box">
+    <a href="#/edit" ng-bind="statusButtonTitle"  class="btn btn-info"></a>
+    <br />
+    <div class="form-content">
+        <div class="item-div" ng-repeat="item in items">
+            <label class="item-label">{{item.type}} </label>
+            <span class="item-text">{{item.text}}</span>
+        </div>
+    </div>
+    <button type="button"  ng-click="submitForm()" class="btn btn-default">提交</button>
+</div>

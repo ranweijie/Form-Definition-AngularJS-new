@@ -1,0 +1,68 @@
+/***init css***/
+@charset "utf-8";
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body, div,iframe, ul, ol, dl, dt, dd, li, dl,
+h1, h2, h3, h4, table,th, td, input, button, select,textarea,hr {
+	margin:0;
+	padding:0;
+	font-style: normal;
+	font:12px/22px "\5B8B\4F53",Arial, Helvetica, sans-serif;
+}
+body{
+	color:#000000;
+	background:#f4f4f4;
+	text-align:center;
+}
+ol, ul ,li{list-style: none;}
+
+a{
+	color:#000000;
+	text-decoration:none;
+}
+a:hover{color:#F00;}
+
+#main_box{
+	width: 450px;
+	min-height: 400px;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 10px;
+	border: 2px solid red;
+	border-radius: 20px;
+}
+
+.add-btn{
+	display: block;
+	/*padding-top: px;*/
+	margin-left: 190px;
+	margin-top: 10px;
+	height: 40px;
+	width: 40px;
+	border: 1px solid #1b6d85;
+	border-radius: 20px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.form-content{
+	min-height: 20px;
+}
+#pop_up_box{
+	/*display: none;*/
+	width: 150px;
+	height: 120px;
+	border: 1px solid #09f;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin:auto;
+	margin-top: 200px;
+	background-color:#f0f0f0;
+	z-index: 999;
+}
