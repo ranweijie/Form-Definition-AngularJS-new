@@ -8,7 +8,7 @@
         <div class="item-div" ng-repeat="item in items">
             <label class="item-label">{{item.type}} </label>
             <span class="item-text">{{item.text}}</span>
-            <button class="btn btn-danger btn-xs"  class="item-temove" ng-click="removeItem(item.id)">
+            <button class="btn btn-danger btn-xs"   ng-click="removeItem(item.id)">
                 <!--<span class="glyphicon glyphicon-minus"></span>删除-->remove
             </button>
         </div>
@@ -18,12 +18,12 @@
     <h1>选择添加类型</h1>
     <div class="form-group">
         <label class="radio-inline" for="text">
-            <input id="text" name="input-type" type="radio" value="text">文本
+            <input id="text" name="input-type" type="radio" ng-value='"text"' ng-model="checkedType">文本
         </label><br>
         <label class="radio-inline" for="date">
-            <input id="date" name="input-type" type="radio" value="date" checked>日期
+            <input id="date" name="input-type" type="radio" ng-value='"date"' ng-model="checkedType" >日期
         </label>
     </div>
     <button type="button" class="btn btn-sm btn-default" ng-click="closePopUpBox()"> 关闭</button>
-    <button type="button" class="btn btn-sm btn-warning" ng-click="addItem()"> 添加</button>
+    <button type="button" class="btn btn-sm btn-warning" ng-click="addItem(checkedType)"> 添加</button>
 </div>

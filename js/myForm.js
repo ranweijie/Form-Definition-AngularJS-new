@@ -2,6 +2,7 @@
  * Created by ranweijie on 16-7-5.
  */
 angular.module('myForm',['ngRoute','myForm.controllers'])
+    // .run(["$rootScope",function ($rootScope) {
     .run(["$rootScope",function ($rootScope) {
         $rootScope.items = []
     }])
@@ -37,17 +38,22 @@ angular.module('myForm.controllers',[])
             $rootScope.hasPopUpBox = false;
         };
 
-        $rootScope.addItem = function () {
-            var addItemType = $('input[name="input-type"]:checked').val();
-            var addItemId = parseInt((new Date()).getTime());
-            var addItemText = addItemType == "text" ? "我是文本"+addItemId :"我是日期"+addItemId;
-            var addItem = {"type":addItemType,"id":addItemId,"text":addItemText};
+        $rootScope.addItem = function (itemType) {
+            // console.log("itemType==>",itemType);
+            if(!itemType){
+                alert("Sorry,您还没有选择要添加的类型！！");
+                return
+            }
+            var addItemId = parseInt((new Date()).getTime()),
+                addItemText = itemType == "text" ? "我是文本"+addItemId :"我是日期"+addItemId;
+                addItem = {"type":itemType,"id":addItemId,"text":addItemText};
+
             // console.log(addItem);
             $rootScope.items.push(addItem);
         };
-        $rootScope.removeItem = function (index) {
+        $rootScope.removeItem = function (id) {
             for(var i in $rootScope.items){
-                if($rootScope.items[i]["id"] == index){
+                if($rootScope.items[i]["id"] == id){
                     $rootScope.items.splice(i,1);
                     break;
                 }
