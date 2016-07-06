@@ -8,7 +8,8 @@
         <div class="item-div" ng-repeat="item in items">
             <label class="item-label">{{item.type}} </label>
             <span class="item-text">{{item.text}}</span>
-            <button class="btn btn-danger btn-xs"   ng-click="removeItem(item.id)">
+            <!--<button class="btn btn-danger btn-xs"   ng-click="removeItem(item.id)">-->
+            <button class="btn btn-danger btn-xs"   ng-click="removeItem($index)">
                 <!--<span class="glyphicon glyphicon-minus"></span>删除-->remove
             </button>
         </div>

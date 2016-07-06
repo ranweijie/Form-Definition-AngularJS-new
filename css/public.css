@@ -1,8 +1,8 @@
 /***init css***/
 @charset "utf-8";
 *{
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 }
 body, div,iframe, ul, ol, dl, dt, dd, li, dl,
 h1, h2, h3, h4, table,th, td, input, button, select,textarea,hr {
@@ -13,7 +13,6 @@ h1, h2, h3, h4, table,th, td, input, button, select,textarea,hr {
 }
 body{
 	color:#000000;
-	/*background:#f4f4f4;*/
 	text-align:center;
 }
 ol, ul ,li{list-style: none;}
